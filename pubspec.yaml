@@ -113,3 +113,4 @@ flutter:
     - images/ic_osc_logo.png
     - images/ic_add_pics.png
     - images/ic_eye.png
+    - data_repo/starwars_data.json
