@@ -114,3 +114,8 @@ flutter:
     - images/ic_add_pics.png
     - images/ic_eye.png
     - data_repo/starwars_data.json
+  fonts:
+    - family: Pacifico
+      fonts:
+        - asset: data_repo/fonts/Pacifico-Regular.ttf
+          weight: 400

@@ -1,11 +1,18 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/pages/MainTabPage.dart';
+import 'package:flutter_app/test/AlertDialogPage.dart';
 import 'package:flutter_app/test/ButtonStatePage.dart';
+import 'package:flutter_app/test/CustomFontPage.dart';
 import 'package:flutter_app/test/EditTextPage.dart';
+import 'package:flutter_app/test/HttpUsingPage.dart';
 import 'package:flutter_app/test/LoadImagePage.dart';
 import 'package:flutter_app/test/LoadLocalJsonPage.dart';
+import 'package:flutter_app/test/StepperPage.dart';
 import 'package:flutter_app/test/ThemePage.dart';
+
+import 'BottomNavigationPage.dart';
+import 'TabsPage.dart';
 
 class MainTestPage extends StatefulWidget {
   @override
@@ -75,6 +82,54 @@ class _MainTestPageState extends State<MainTestPage> {
                   }));
                 },
                 child: Text("加载本地JSON"),
+              ),
+              RaisedButton(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (_) {
+                    return HttpUsingPage();
+                  }));
+                },
+                child: Text("Http Get 点击!"),
+              ),
+              RaisedButton(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (_) {
+                    return AlertDialogPage();
+                  }));
+                },
+                child: Text("AlertDialog 点击!"),
+              ),
+              RaisedButton(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (_) {
+                    return StepperPage();
+                  }));
+                },
+                child: Text("带有下一步界面"),
+              ),
+              RaisedButton(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (_) {
+                    return TabsPage();
+                  }));
+                },
+                child: Text("多Tabs界面"),
+              ),
+              RaisedButton(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (_) {
+                    return BottomNavigationPage();
+                  }));
+                },
+                child: Text("BottomNavigation界面"),
+              ),
+              RaisedButton(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (_) {
+                    return CusomFontPage();
+                  }));
+                },
+                child: Text("CusomFont界面"),
               ),
             ],
           ),
